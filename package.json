@@ -8,14 +8,17 @@
     "start": "webpack-dev-server --open",
     "deploy": "npm run build && firebase deploy",
     "firebase-init": "firebase login && firebase init",
-    "prettier-format": "prettier --config package.json --write './**/*.js'",
-    "prettier-format-local": "prettier --config .prettierrc --write './**/*.js'",
-    "prettier-check": "prettier --config package.json --list-different './**/*.js'"
+    "prettier-format": "prettier --config package.json --write './**/*.(js)'",
+    "prettier-format-local": "prettier --config .prettierrc --write './**/*.(js)'",
+    "prettier-check": "prettier --config package.json --list-different './**/*.(js)'"
   },
   "babel": {
     "presets": [
       "env",
       "react"
+    ],
+    "plugins": [
+      "transform-class-properties"
     ]
   },
   "prettier": {
@@ -34,6 +37,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
