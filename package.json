@@ -9,13 +9,14 @@
     "deploy": "npm run build && firebase deploy",
     "firebase-init": "firebase login && firebase init",
     "prettier-format": "prettier --config package.json --write './**/*.js'",
-    "prettier-format-local":
-      "prettier --config .prettierrc --write './**/*.js'",
-    "prettier-check":
-      "prettier --config package.json --list-different './**/*.js'"
+    "prettier-format-local": "prettier --config .prettierrc --write './**/*.js'",
+    "prettier-check": "prettier --config package.json --list-different './**/*.js'"
   },
   "babel": {
-    "presets": ["env", "react"]
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "prettier": {
     "printWidth": 80,
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
     "query-string": "^5.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
